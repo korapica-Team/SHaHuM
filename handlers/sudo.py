@@ -86,7 +86,7 @@ def sudo(client, message,redis):
 		if rank == "sudo":
 			if text == "وضع مجموعه المطور":
 				redis.set("{}Nbot:sudogp".format(BOT_ID),chatID)
-				Bot("sendMessage",{"chat_id":chatID,"text":f"✅꒐ تم تحديد المجموعه لاستلام الاشعارات \n{title} {chatID}","reply_to_message_id":message.message_id,"parse_mode":"html"})
+				Bot("sendMessage",{"chat_id":chatID,"text":f"‹ :꒐ تم تحديد المجموعه لاستلام الاشعارات \n{title} {chatID}","reply_to_message_id":message.message_id,"parse_mode":"html"})
 		if re.search("^اضف امر عام (.*)$",text):
 			cc = re.findall("^اضف امر عام (.*)$",text)
 			redis.hset("{}Nbot:stepSUDO:or".format(BOT_ID),userID,cc[0])
