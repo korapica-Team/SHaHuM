@@ -114,7 +114,7 @@ def allGP(client, message,redis):
 
     if text == "رتبتي":
       t = IDrank(redis,userID,chatID,r)
-      Bot("sendMessage",{"chat_id":chatID,"text":f"⏏️꒐ موقعك : {t}","reply_to_message_id":message.message_id,"parse_mode":"html"})
+      Bot("sendMessage",{"chat_id":chatID,"text":f"‹ : موقعك : {t}","reply_to_message_id":message.message_id,"parse_mode":"html"})
     if text == c.ID and not redis.sismember("{}Nbot:IDSend".format(BOT_ID),chatID) and message.reply_to_message:
       us = message.reply_to_message.from_user.id
       rusername = message.reply_to_message.from_user.username
